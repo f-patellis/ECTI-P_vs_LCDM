@@ -1,4 +1,4 @@
-RSD data provenance (fσ₈)
+# RSD data provenance (fσ₈)
 
 This file documents the origin of each fσ₈(z) data point used in rsd.csv.
 All values are extracted from published measurements in the literature.
@@ -21,3 +21,4 @@ Gil-Marín et al. (2018)
 
 The likelihood assumes independent Gaussian uncertainties.
 No additional growth parameters are introduced.
+
