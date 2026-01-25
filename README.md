@@ -1,5 +1,6 @@
 # ECTI-P vs ΛCDM — Late-time, background-only extension
 FAIR k=5 comparison with Planck compressed 3D (and optional lensing)
+ECTI-P is a purely phenomenological, late-time background-only extension, not derived from a specific fundamental theory.
 This repository contains a referee-grade Jupyter notebook implementing a fair comparison between the standard ΛCDM cosmological model and ECTI-P, a phenomenological late-time extension of the background expansion.
 The analysis is designed for full reproducibility, academic scrutiny, and direct inspection by referees.
 
