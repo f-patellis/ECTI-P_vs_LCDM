@@ -70,6 +70,7 @@ Full reproduction mode
 Set RUN_MCMC = True.
 MCMC chains are generated using emcee with an HDF5 backend (resume-safe).
 Final χ² values, AIC/BIC, tables, and figures are produced automatically.
+The notebook assumes it is run from the root of the repository; input data (including RSD) are loaded via relative paths (e.g. data/rsd/rsd.csv)
 
 # Reproducibility notes
 The notebook is committed without outputs and without execution counts.
