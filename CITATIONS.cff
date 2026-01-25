@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "ECTI-P vs ΛCDM: Late-time background-only extension"
+authors:
+  - family-names: Patel
+    given-names: Felipe
+repository-code: https://github.com/f-patellis/ECTI-P_vs_LCDM
+license: MIT
+version: 1.0.0
