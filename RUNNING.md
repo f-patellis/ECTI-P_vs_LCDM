@@ -127,12 +127,11 @@ convergence diagnostics
 
 ### Expected runtime
 
-Runtime depends on hardware and number of steps:
+Expected runtime:
 
-Sanity-check mode: a few minutes
-
-Full MCMC reproduction: several hours per paired run
-
+With the default settings (10,000 steps), one paired run (ΛCDM + ECTI) takes ≈10.5 hours on an 8-core CPU machine.
+A standard campaign of 3 paired runs therefore requires ≈31–32 hours end-to-end.
+Runtime depends on hardware, number of walkers/steps, and I/O performance.
 
 The reference results shown in the README were obtained using 10,000-step paired MCMC runs.
 
