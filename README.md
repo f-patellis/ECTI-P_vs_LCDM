@@ -3,6 +3,16 @@
 **FAIR k = 5 comparison using SN Ia, BAO (DESI 2024), RSD, KiDS, Planck compressed priors, and optional CMB lensing**
 
 ---
+TL;DR:
+
+Δχ² = −11.31 (FAIR k=5, same parameters as ΛCDM)
+
+5/6 late-time probes improved; BAO penalty negligible (+0.07)
+
+Late-time H(z) only; no recombination / no perturbations / no TTTEEE
+
+Robust across 3 independent runs; insensitive to ±10% variations in fixed parameters
+
 **Posterior comparison (ΛCDM vs ECTI-P, FAIR k = 5)**
 <p align="center">
 <img width="2124" height="2124" alt="corner_overlay_LCDM_vs_ECTI_k5" src="https://github.com/user-attachments/assets/6d777861-811f-4cd4-9bb4-6593d7702ce9" />
