@@ -2,7 +2,8 @@
 
 ### Requirements
 
-The analysis requires a standard scientific Python environment:
+The required Python packages are listed below.
+No dedicated requirements.txt file is used, to keep the setup explicit and transparent.
 
 Python ≥ 3.9
 
@@ -20,20 +21,17 @@ emcee (v3)
 
 corner (optional, for corner plots)
 
-
-All dependencies are listed in requirements.txt.
-
-
 ---
 
 ### Installation
 
 Clone the repository and install dependencies:
 
-git clone https://github.com/f-patellis/ECTI-P_vs_LCDM.git
-cd ECTI-P_vs_LCDM
-pip install -r requirements.txt
+git clone
 
+https://github.com/f-patellis/ECTI-P_vs_LCDM.git
+
+cd ECTI-P_vs_LCDM
 
 ---
 
