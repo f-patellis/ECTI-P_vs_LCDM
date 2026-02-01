@@ -1,97 +1,216 @@
-# ECTI-P vs ΛCDM — Late-time, background-only extension
-FAIR k=5 comparison with Planck compressed 3D (and optional lensing)
+# ECTI-P vs ΛCDM  
+### Late-time, background-only phenomenological extension  
+**FAIR k = 5 comparison using SN Ia, BAO (DESI 2024), RSD, KiDS, Planck compressed priors, and optional CMB lensing**
 
+---
+**Posterior comparison (ΛCDM vs ECTI-P, FAIR k = 5)**
+<p align="center">
+<img width="2124" height="2124" alt="corner_overlay_LCDM_vs_ECTI_k5" src="https://github.com/user-attachments/assets/6d777861-811f-4cd4-9bb4-6593d7702ce9" />
+</p>
 
-ECTI-P is a purely phenomenological, late-time background-only extension, not derived from a specific fundamental theory.
+---
 
+## Key empirical result
 
-This repository contains a referee-grade Jupyter notebook implementing a fair comparison between the standard ΛCDM cosmological model and ECTI-P, a phenomenological late-time extension of the background expansion.
-The analysis is designed for full reproducibility, academic scrutiny, and direct inspection by referees.
+Across six independent late-time cosmological probes, ECTI-P yields a net improvement
+in total χ² relative to ΛCDM, with 5/6 probes improved and a negligible BAO penalty (+0.07), under a strictly FAIR comparison with the same number of free parameters (k = 5).
 
-# Scientific scope (strict)
-ECTI-P modifies the cosmological model only at late times and only at the background level.
-The model acts exclusively through the expansion history H(z) at low redshift.
-No early-time physics is modified:
-– no recombination changes
-– no perturbation equations
-– no Boltzmann solvers (CLASS or CAMB)
-– no CMB TT / TE / EE likelihoods
-– no CLik
-All early-universe physics is therefore kept identical to ΛCDM.
-Planck information is included exclusively through compressed distance priors.
+### χ² improvement by dataset (ECTI − ΛCDM)
 
-# Model comparison (FAIR k = 5)
-Both ΛCDM and ECTI-P are sampled with the same parameter vector:
-(H₀, Ωₘ₀, σ₈, M, ω_b)
-ΛCDM uses the standard background evolution.
-ECTI-P uses the same parameter vector, with its internal late-time parameters (β, zₜ) fixed and not sampled.
-Because both models have the same number of free parameters, information criteria reduce to:
-ΔAIC = ΔBIC = Δχ².
+| Dataset | Δχ² |
+|------|------|
+| Pantheon+ SN Ia | −9.84 |
+| Planck CMB (compressed) | −1.03 |
+| CMB lensing | −0.26 |
+| RSD (fσ₈) | −0.16 |
+| KiDS (S₈ prior) | −0.09 |
+| DESI 2024 BAO | +0.07 |
+| **Total** | **−11.31** |
+<p align="center">
+<img width="1548" height="864" alt="delta_chi2_per_probe_k5" src="https://github.com/user-attachments/assets/5d185e3b-c755-457f-9c28-3920b1fe362b" />
+</p>
+Because both models have the same number of sampled parameters,  
+**ΔAIC = ΔBIC = Δχ²**.
+<p align="center">
+<img width="1152" height="864" alt="stability_deltas_k5" src="https://github.com/user-attachments/assets/8d6d920e-9ff6-48c0-92d7-c3efee015bae" />
+</p>
+---
 
-# Datasets
-## Supernovae
-Pantheon+ (2022) supernova compilation with SH0ES calibration.
-## Baryon Acoustic Oscillations
+## Scientific scope (strict)
+
+ECTI-P is a **purely phenomenological, late-time, background-only extension** of ΛCDM.
+
+The model modifies **only the expansion history H(z)** at low redshift.
+
+Explicitly, ECTI-P does **not** modify:
+- recombination physics
+- perturbation equations
+- linear or non-linear growth sector
+- neutrinos or radiation content
+- sound horizon physics rₛ
+- CMB primary anisotropies
+
+Accordingly:
+- no Boltzmann solvers (CLASS or CAMB)
+- no TT / TE / EE likelihoods
+- no CLik
+
+Planck information is included **exclusively through compressed distance priors** and, optionally, through the Planck 2018 lensing-only constraint.
+
+## Effective background modification
+
+ECTI-P modifies the late-time expansion history through an effective deformation
+of the ΛCDM background evolution.
+
+The expansion rate is written as:
+
+    E(z)^2 = E_LCDM(z)^2 × F(z; beta, z_t)
+
+with:
+
+    F(z; beta, z_t) → 1   for   z >> z_t
+
+The parameters (beta, z_t) control the amplitude and redshift location of a smooth
+late-time transition in H(z).
+
+In the limit beta → 0, the model continuously reduces to standard ΛCDM.
+The explicit functional form of F(z; beta, z_t) is defined in the notebook
+and implemented directly in the code.
+---
+
+## Model comparison (FAIR k = 5)
+
+Both models are sampled with the identical parameter vector:
+
+    theta = (H0, Omega_m0, sigma8, M, omega_b)
+    
+where:
+- H0        : Hubble constant
+- Omega_m0 : present-day matter density
+- sigma8   : amplitude of matter fluctuations
+- M        : SN absolute magnitude
+- omega_b  : physical baryon density
+  
+- ΛCDM uses the standard background evolution.
+- ECTI-P uses the same vector, with its internal late-time parameters (β, zₜ) fixed and not sampled.
+
+No additional degrees of freedom are introduced in ECTI-P.
+
+---
+
+## Datasets
+
+### Supernovae
+Pantheon+ (2022) compilation with SH0ES calibration.
+
+### Baryon Acoustic Oscillations
 DESI 2024 BAO measurements implemented as a Gaussian likelihood.
-## Redshift-Space Distortions
-A curated compilation of fσ₈(z) measurements extracted from the literature.
-The data file is included directly in the repository, together with an explicit row-by-row provenance document.
-The RSD likelihood uses the standard GR linear growth equation driven by the background expansion H(z).
+
+### Redshift-Space Distortions
+Curated compilation of published fσ₈(z) measurements.  
+The data file is included directly in this repository, together with an explicit row-by-row provenance document.
+
+The RSD likelihood assumes standard GR linear growth driven by the background expansion H(z).  
 No additional growth parameters are introduced.
-## Weak Lensing
-KiDS S₈ compressed Gaussian prior.
-This is not the full cosmic shear two-point likelihood.
-## Cosmic Microwave Background (compressed)
+
+### Weak Lensing
+KiDS S₈ compressed Gaussian prior (not the full cosmic shear likelihood).
+
+### Cosmic Microwave Background (compressed)
 Planck 2018 compressed distance priors (R, ℓ_A, ω_b) with full covariance.
-## CMB Lensing (optional)
-Planck 2018 lensing-only derived one-dimensional constraint, enabled via a notebook flag and consistently included in χ² and BIC when used.
 
-# Repository structure
-The repository contains:
-– the main analysis notebook
-– a data directory containing the RSD table and its provenance
-– directories for figures, tables, and metadata generated at runtime
-All runtime outputs are generated automatically and are not required to execute the notebook.
+### CMB Lensing (optional)
+Planck 2018 lensing-only derived one-dimensional constraint, enabled via a notebook flag and consistently included in χ² and BIC.
 
-# Requirements
-The notebook requires a standard scientific Python environment (Python 3.9 or later).
-Required packages:
-– numpy
-– scipy
-– pandas
-– matplotlib
-– tqdm
-– emcee (version 3)
-– corner (optional, only for corner plots)
-Runtime warnings related to floating-point underflows are intentionally suppressed in the notebook for readability.
-This does not affect the numerical results.
+---
 
-# How to run
-Documentation and sanity-check mode
-Set the flag RUN_MCMC = False in the notebook.(cell 1.1.2)
-The notebook can then be executed top-to-bottom without running any sampling.
-All post-MCMC cells are skip-safe.
-Full reproduction mode
-Set RUN_MCMC = True.
-MCMC chains are generated using emcee with an HDF5 backend (resume-safe).
-Final χ² values, AIC/BIC, tables, and figures are produced automatically.
-The notebook assumes it is run from the root of the repository; input data (including RSD) are loaded via relative paths (e.g. data/rsd/rsd.csv)
+## Robustness and convergence
 
-# Reproducibility notes
-The notebook is committed without outputs and without execution counts.
-χ² values are always recomputed from the likelihood functions at the reported MAP parameters.
-The RSD likelihood uses a curated literature compilation with explicit provenance.
+The results are stable across **three independent paired MCMC runs**.
 
-# Citation
+| Run | Δχ² |
+|----|----|
+| 1 | −11.31 |
+| 2 | −11.30 |
+| 3 | −11.31 |
+
+All chains satisfy:
+- R̂ < 1.02
+- high effective sample size
+- no stuck walkers or pathological behavior
+
+## Sensitivity Analysis (Fixed Parameters)
+
+The ECTI-P specific parameters (`β`, `z_t`) are treated as fixed characteristics of the effective late-time modification for the MCMC sampling ($k=5$).
+
+To verify that the observed $\chi^2$ improvement is not the result of hyper-fine-tuning, we performed a grid search in the $(\beta, z_t)$ plane around the reference values (±10%).
+
+<p align="center">
+  <img width="1600" height="960" alt="grid_beta_zt_FIXEDMAP_LASTRUN_k5" src="https://github.com/user-attachments/assets/36938771-73f7-4bb9-b358-9e20083e0bb2" />
+</p>
+(The sensitivity analysis and grid search shown below were performed in preliminary campaigns and are provided here to document the robustness of the fixed parameter choice. They are not part of the final MCMC notebook pipeline.)
+
+**Result :** The $\chi^2$ landscape is shallow around the reference solution.  
+Even for ±10% deviations in the fixed parameters, ECTI-P retains a substantial advantage over ΛCDM, with $\Delta\chi^2 \approx -9$ to $-11$.
+
+This demonstrates that the statistical gain is driven by the late-time structural modification of $H(z)$ around $z \sim 0.1$, rather than by precise parameter tuning.
+---
+
+## Visual diagnostics
+
+- Supernova distance modulus residuals
+  <p align="center">
+  <img width="1368" height="576" alt="residuals_SN_raw_k5" src="https://github.com/user-attachments/assets/46c76e28-23a6-4bad-a42d-a067080fa50f" />
+  </p>
+  Supernova distance modulus residuals at the reference MAP parameters.
+ECTI-P improves the global fit without introducing redshift-dependent systematics or residual structure.
+
+- BAO residuals
+<p align="center">
+<img width="1152" height="864" alt="pulls_BAO_k5_LAST_run003" src="https://github.com/user-attachments/assets/a648baea-f5b2-4286-9d4b-8bea9b689417" />
+</p>
+BAO pulls at the reference MAP parameters.
+ECTI-P preserves the standard ruler constraints and remains statistically neutral with respect to ΛCDM.
+
+- RSD residuals
+<p align="center">
+  <img width="1368" height="576" alt="pulls_RSD_k5" src="https://github.com/user-attachments/assets/b1f07afb-469d-4075-90dc-be292db39820" />
+</p>
+RSD pulls at the reference MAP parameters.
+
+Both ΛCDM and ECTI-P remain consistent with fσ₈ measurements, indicating that the late-time background modification does not introduce growth-sector tensions.
+
+All figures are generated automatically by the notebook.
+
+---
+
+Repository structure:
+- notebook/   Main analysis notebook
+- data/rsd/   RSD table and provenance
+- figures/    Auto-generated figures
+- tables/     Auto-generated tables
+- meta/       Run metadata
+
+  Runtime outputs are generated automatically and are not required to execute the notebook.
+
+---
+
+## How to run
+
+For full reproduction instructions, see RUNNING.md
+
+## Next step
+The definitive test of this phenomenological extension requires confrontation with the full Planck TT/TE/EE likelihood, which necessitates a Boltzmann treatment and HPC resources beyond the scope of the present work.
+
+## Citation
 If you use this work, please cite:
-– Pantheon+ (Brout et al. 2022)
-– SH0ES (Riess et al. 2022)
-– DESI 2024 BAO
-– Planck 2018 (Planck Collaboration 2018 results Planck Legacy Archive)
-– The primary RSD survey papers listed in the RSD provenance file
-A CITATION.cff file may be added for automated citation support.
+Pantheon+ (Brout et al. 2022)
+SH0ES (Riess et al. 2022)
+DESI 2024 BAO
+Planck 2018 results (Planck Legacy Archive)
+The primary RSD survey papers listed in the RSD provenance file
+A CITATION.cff file is provided.
 
-# License
-The code is released under the repository license.
-All data values are extracted from published literature and must be cited accordingly.
-
+## License
+Released under the repository license.
+All data values originate from published literature and must be cited accordingly.
