@@ -3,7 +3,7 @@
 **FAIR k = 5 comparison using SN Ia, BAO (DESI 2024), RSD, KiDS, Planck compressed priors, and optional CMB lensing**
 
 ---
-TL;DR:
+### TL;DR:
 
 Δχ² = −11.31 (FAIR k=5, same parameters as ΛCDM)
 
