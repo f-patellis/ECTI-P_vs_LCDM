@@ -200,7 +200,7 @@ Repository structure:
 For full reproduction instructions, see RUNNING.md
 
 ## Next step
-The definitive test of this phenomenological extension requires confrontation with the full Planck TT/TE/EE likelihood, which necessitates a Boltzmann treatment and HPC resources beyond the scope of the present work.
+The definitive test of this phenomenological extension requires confrontation with the full Planck TT/TE/EE likelihood, which necessitates a Boltzmann treatment and HPC environment not currently available to the autor.
 
 ## Citation
 If you use this work, please cite:
