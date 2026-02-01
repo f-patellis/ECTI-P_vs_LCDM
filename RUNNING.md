@@ -33,6 +33,11 @@ https://github.com/f-patellis/ECTI-P_vs_LCDM.git
 
 cd ECTI-P_vs_LCDM
 
+The user is expected to have a standard scientific Python environment.
+If needed, dependencies can be installed manually, e.g.:
+
+pip install numpy scipy pandas matplotlib tqdm emcee corner jupyter
+
 ---
 
 ### Quick sanity check (no MCMC)
