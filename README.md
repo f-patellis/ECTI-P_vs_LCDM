@@ -120,8 +120,7 @@ DESI 2024 BAO measurements implemented as a Gaussian likelihood.
 Curated compilation of published fσ₈(z) measurements.  
 The data file is included directly in this repository, together with an explicit row-by-row provenance document.
 
-The RSD likelihood assumes standard GR linear growth driven by the background expansion H(z).  
-No additional growth parameters are introduced.
+The RSD likelihood assumes standard GR linear growth, computed by solving the linear growth equation self-consistently using the model-specific background expansion H(z). No modified gravity or additional growth parameters are introduced.
 
 ### Weak Lensing
 KiDS S₈ compressed Gaussian prior (not the full cosmic shear likelihood).
