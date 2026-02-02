@@ -87,6 +87,18 @@ In the limit beta → 0, the model continuously reduces to standard ΛCDM.
 The explicit functional form of F(z; beta, z_t) is defined in the notebook
 and implemented directly in the code.
 ---
+## Late-time deformation of the expansion history (visualization)
+
+the following figures are provided for physical interpretation and visualization.
+They are derived from the reference MAP parameters and are not part of the automatic reproduction pipeline.
+
+<p align="center">
+<img width="1600" height="1000" alt="Hz_LCDM_vs_ECTI_from_LASTH5MAP_k5" src="https://github.com/user-attachments/assets/332c7ac0-ef7b-4bf0-af33-f23830ccbd3c" />
+</p>
+
+<p align="center">
+<img width="1600" height="1000" alt="Hz_ratio_ECTI_over_LCDM_from_LASTH5MAP_k5" src="https://github.com/user-attachments/assets/ef311fc2-c3c6-4b61-a535-790da3be817b" />
+</p>
 
 ## Model comparison (FAIR k = 5)
 
