@@ -9,7 +9,7 @@
 
 5/6 late-time probes improved; BAO penalty negligible (+0.07)
 
-Late-time H(z) only; no recombination / no perturbations / no TTTEEE
+Late-time H(z) only; no recombination / no perturbations / no TT/TE/EE
 
 Robust across 3 independent runs; insensitive to ±10% variations in fixed parameters
 
