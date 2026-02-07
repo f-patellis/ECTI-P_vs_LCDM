@@ -206,14 +206,26 @@ All figures are generated automatically by the notebook.
 ---
 
 Repository structure:
-- notebook/   Main analysis notebook
-- data/rsd/   RSD table and provenance
-- figures/    Auto-generated figures
-- tables/     Auto-generated tables
-- meta/       Run metadata
 
-  Runtime outputs are generated automatically and are not required to execute the notebook.
+- ECTI_P_vs_LCDM_full_likelihood_Planck_3D_+*.ipynb  
+  Main analysis notebook (self-contained, generates all outputs)
 
+- data/rsd/  
+  RSD tables and provenance
+
+- README.md  
+  Project overview and scientific context
+
+- RUNNING.md  
+  Reproducibility and execution instructions
+
+- CITATION.cff  
+  Citation metadata
+
+- LICENSE  
+  MIT license
+
+  All figures, tables, and diagnostics are generated automatically by the notebook and are not stored in the repository.
 ---
 
 ## How to run
@@ -222,6 +234,11 @@ For full reproduction instructions, see RUNNING.md
 
 ## Next step
 The definitive test of this phenomenological extension requires confrontation with the full Planck TT/TE/EE likelihood, which necessitates a Boltzmann treatment and HPC environment not currently available to the autor.
+
+## Contact
+
+For questions regarding the methodology, reproducibility, or scope of the results,  
+feel free to contact the author via GitHub or email.
 
 ## Citation
 If you use this work, please cite:
