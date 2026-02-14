@@ -100,6 +100,48 @@ They are derived from the reference MAP parameters and are not part of the autom
 <img width="1600" height="1000" alt="Hz_ratio_ECTI_over_LCDM_from_LASTH5MAP_k5" src="https://github.com/user-attachments/assets/ef311fc2-c3c6-4b61-a535-790da3be817b" />
 </p>
 
+## Effective-fluid diagnostics (background interpretation)
+
+ECTI-P can be reinterpreted as an effective dark-energy fluid producing the same background expansion history.
+
+From the model-implied E(z), we derive:
+
+- the effective equation of state w_eff(z)
+- the deceleration parameter q(z)
+
+These diagnostics are purely interpretative and do not modify the likelihood pipeline.
+
+<p align="center">
+<img width="579" height="455" alt="w_eff" src="https://github.com/user-attachments/assets/3c48b435-c8ca-4baf-8df8-ea7024b87448" />
+</p>
+
+<p align="center">
+<img width="578" height="455" alt="q(z)" src="https://github.com/user-attachments/assets/87863a40-4ad4-4b54-b9e8-6b8506149cc1" />
+</p>
+
+### Key observations:
+
+- w_eff(z) deviates smoothly from −1 at low redshift
+- the deviation is localized in the z ≈ 0.1–0.6 range
+- the acceleration transition redshift shifts slightly relative to ΛCDM
+- the model remains background-consistent at higher redshift
+
+### Derived background quantities (MAP reference)
+
+At the MAP point used for visualization:
+
+- q₀ (ΛCDM) ≈ −0.55  
+- q₀ (ECTI-P) ≈ −0.16  
+
+- z_acc (ΛCDM) ≈ 0.67  
+- z_acc (ECTI-P) ≈ 0.63  
+
+These values illustrate the modified late-time acceleration behaviour implied by ECTI-P at the background level, while remaining consistent with high-redshift constraints used in the likelihood.
+
+Importantly, ECTI-P modifies only the late-time background expansion history and does not alter early-universe physics, recombination, or perturbation dynamics within the current implementation.
+
+The effective-fluid diagnostics presented here are therefore strictly background-level reinterpretations of the model.
+
 ## Model comparison (FAIR k = 5)
 
 Both models are sampled with the identical parameter vector:
