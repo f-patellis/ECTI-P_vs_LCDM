@@ -89,6 +89,8 @@ and implemented directly in the code.
 ---
 ## Early-Universe Geometrical Consistency
 
+The following results are derived from a dedicated post-production consistency check performed on the reference MAP parameters. While the compressed priors are part of the automated MCMC pipeline, this sub-ppm validation is provided as an independent proof of model stability.
+
 To ensure that the late-time modification $F(z)$ does not conflict with early-universe physics, we perform an ultra-fine coherence check at the decoupling redshift ($z_* \approx 1090$). 
 
 At the Reference MAP parameters, ECTI-P recovers the Planck 2018 acoustic scales and distance markers with **sub-percent precision**, demonstrating perfect "Early-Time" consistency.
