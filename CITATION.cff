@@ -1,8 +1,10 @@
 cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
 title: "ECTI-P vs ΛCDM: Late-time background-only extension"
 authors:
-  - family-names: Patel
+  - family-names: Patellis
     given-names: Felipe
 repository-code: https://github.com/f-patellis/ECTI-P_vs_LCDM
+doi: [![DOI](https://zenodo.org/badge/1141898936.svg)](https://doi.org/10.5281/zenodo.19345523)
 license: MIT
 version: 1.0.0
