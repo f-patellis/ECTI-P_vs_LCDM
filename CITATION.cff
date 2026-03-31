@@ -5,6 +5,6 @@ authors:
   - family-names: Patellis
     given-names: Felipe
 repository-code: https://github.com/f-patellis/ECTI-P_vs_LCDM
-doi: [![DOI](https://zenodo.org/badge/1141898936.svg)](https://doi.org/10.5281/zenodo.19345523)
+doi: 10.5281/zenodo.19345523
 license: MIT
 version: 1.0.0
