@@ -5,13 +5,15 @@
 ---
 ### TL;DR:
 
-Δχ² = −11.31 (FAIR k=5, same parameters as ΛCDM)
+- Performance: Δχ² = −11.31 (FAIR k=5, same number of free parameters as ΛCDM)
 
-5/6 late-time probes improved; BAO penalty negligible (+0.07)
+- Consistency: Internal geometric alignment with Planck z_* (recombination) within ~50 ppm, ensuring high-redshift compatibility.
 
-Late-time H(z) only; no recombination / no perturbations / no TT/TE/EE
+- Success: 5/6 late-time probes improved; BAO penalty negligible (+0.07)
 
-Robust across 3 independent runs; insensitive to ±10% variations in fixed parameters
+- Scope: Late-time H(z) only; no recombination / no perturbations / no TT/TE/EE
+
+- Stability: Robust across 3 independent runs; insensitive to ±10% variations in fixed parameters
 
 **Posterior comparison (ΛCDM vs ECTI-P, FAIR k = 5)**
 <p align="center">
