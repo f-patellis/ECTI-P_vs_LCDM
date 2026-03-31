@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1141898936.svg)](https://doi.org/10.5281/zenodo.19345523)
+
 # ECTI-P vs ΛCDM  
 ### Late-time, background-only phenomenological extension  
 **FAIR k = 5 comparison using SN Ia, BAO (DESI 2024), RSD, KiDS, Planck compressed priors, and optional CMB lensing**
