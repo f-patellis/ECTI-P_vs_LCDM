@@ -5,6 +5,13 @@
 **FAIR k = 5 comparison using SN Ia, BAO (DESI 2024), RSD, KiDS, Planck compressed priors, and optional CMB lensing**
 
 ---
+**Status:** 
+
+- Development of the **full Boltzmann solver integration** is ongoing to achieve self-consistent CMB perturbation theory (TT/TE/EE). High-resolution 200k+ MCMC chains are currently running for final statistical validation.
+- Preliminary comparison: Significant shift in H0 and S8/sigma8 tension.
+
+
+---
 ### TL;DR:
 
 - Performance: Δχ² = −11.31 (FAIR k=5, same number of free parameters as ΛCDM)
